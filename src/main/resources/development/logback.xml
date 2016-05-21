@@ -3,7 +3,7 @@
 
     <property name="app_name" value="wngn-test" />
     <!-- /data/wang/ -->
-    <property name="log_path" value="" />
+    <property name="log_path" value="logs" />
 
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
@@ -20,7 +20,7 @@
             <onMismatch>DENY </onMismatch>
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <FileNamePattern>${log_path}logs/${app_name}/debug.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <FileNamePattern>${log_path}/${app_name}/debug.%d{yyyy-MM-dd}.log</FileNamePattern>
             <MaxHistory>30</MaxHistory>
         </rollingPolicy>
         <encoder>
@@ -37,7 +37,7 @@
             <onMismatch>DENY </onMismatch>
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <FileNamePattern>${log_path}logs/${app_name}/info.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <FileNamePattern>${log_path}/${app_name}/info.%d{yyyy-MM-dd}.log</FileNamePattern>
             <MaxHistory>30</MaxHistory>
         </rollingPolicy>
         <encoder>
@@ -54,7 +54,7 @@
             <onMismatch>DENY </onMismatch>
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <FileNamePattern>${log_path}logs/${app_name}/error.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <FileNamePattern>${log_path}/${app_name}/error.%d{yyyy-MM-dd}.log</FileNamePattern>
             <MaxHistory>30</MaxHistory>
         </rollingPolicy>
         <encoder>
