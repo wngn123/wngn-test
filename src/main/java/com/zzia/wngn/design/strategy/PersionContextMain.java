@@ -1,4 +1,4 @@
-package com.zzia.wngn.strategy;
+package com.zzia.wngn.design.strategy;
 
 /**
  * @author wanggang

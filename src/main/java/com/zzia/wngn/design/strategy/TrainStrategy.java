@@ -1,4 +1,4 @@
-package com.zzia.wngn.strategy;
+package com.zzia.wngn.design.strategy;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
