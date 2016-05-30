@@ -1,5 +1,8 @@
 package com.zzia.wngn.design.interpreter;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * @author wanggang
  * @title
@@ -9,16 +12,12 @@ package com.zzia.wngn.design.interpreter;
  */
 public class InterpreterMain {
 
+    private static Logger logger = LoggerFactory.getLogger(InterpreterMain.class);
+
     public static void main(String args[]) {
-
         String statement = "3 * 2 * 4 / 6 % 5";
-
         Calculator calculator = new Calculator();
-
         calculator.build(statement);
-
-        int result = calculator.compute();
-
-        System.out.println(statement + " = " + result);
+        logger.info(statement + " = " + calculator.compute());
     }
 }
